@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Omolola Odunowo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:auto;
+            font-family:'Nunito', sans-serif;
+            font-size:16px;
+        }
+        
+        section,div{
+            border:0px solid #000;
+        }
+
+        section{
+            padding:10px;
+            display:flex;
+            flex-flow:row wrap;
+        }
+
+        .top-form, .form-focus{
+            flex-basis:100%;
+        }
+
+        .top-form{
+            min-height:20px;
+            background-color:#525254;
+        }
+
+        h1 {
+            color:#fff;
+            text-align:center;
+            font-size:2rem;
+        }
+
+        .form-focus{
+            min-height:100px;
+            background-color: #c5c6ca;
+        }
+
+        h2{
+            text-align:center;
+            font-size:1rem;
+            margin-top:10px;
+        }
+
+        .input_boxes{
+            display:flex;
+            flex-flow:row wrap;
+            width:25%;
+            margin:auto;
+        }
+
+        .input_group{
+            flex-basis:100%;
+        }
+
+        input[type="radio"]{
+            margin-left:70px;
+        }
+
+        .button_group{
+            text-align:center;
+            margin-top:40px;
+        }
+
+        input[type="button"]{
+            background-color:#619398;
+            color:#fff;
+            padding:5px;
+            border:1px solid #619398;
+            border-radius:2px;
+        }            
+    </style>
+
+    <title>A Form</title>
+</head>
+
+<body>
+    <section>
+        <div class="top-form">
+           <h1> Quiz On Important Facts </h1>
+        </div>
+
+        <div class="form-focus">
+        <form>
+            <fieldset>
+                <h2>Which one of these is a JavaScript package manager?</h2>
+                <div class="input_boxes"> <p class="input_group"><input type="radio" id="nodejs" name="package_manager" value="Node.js">
+                <label for="nodejs"> a: Node.js</label></p>
+                <p class="input_group"><input type="radio" id="typescript" name="package_manager" value="Typescript">
+                <label for="typescript">b: Typescript</label></p>
+                <p class="input_group"><input type="radio" id="npm" name="package_manager" value="Npm">
+                <label for="npm">c: Npm</label></p>
+                </div>
+                <p class="button_group"><input type="button" value="Previous Question">
+                <input type="button" value="Next Question"></p>
+
+            </fieldset>
+        </form>
+        </div>
+
+    </section>
+</body>
+</html>

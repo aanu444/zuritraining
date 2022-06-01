@@ -7,5 +7,11 @@
 def find_anagram(word, anagram):
     # [assignment] Add your code here
 
-    return True
+    if sorted(word) == sorted(anagram):
+        return True
+    else:
+        return False
+
+print(find_anagram("Abode", "Adobe"))
+print(find_anagram("Stop", "Start"))
 

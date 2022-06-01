@@ -5,7 +5,7 @@
 
 def read_file_content(filename):
     # [assignment] Add your code here 
-    f = open('omololaodunowo.txt', 'r')
+    f = open('story.txt', 'r')
     filename= f.read()
     f.close()
     return filename

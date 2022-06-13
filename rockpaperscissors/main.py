@@ -1,33 +1,51 @@
-from operator import truediv
 import random
 
+while True:
+    choices =["rock", "paper", "scissors"]
 
-def play():
-    user=input("What's your choice? 'R' for Rock, 'P' for Paper or 'S' for Scissors\n")
-    user=user.lower()
+    computer=random.choice(choices)
+    player=None
 
-    computer=random.choice(["R", "P", "S"])
+    while player not in choices:
+        player = input("Rock, Paper or Scissors?: ").lower()
 
-    if user == computer:
-        return "You and the computer have chosen {}. It is a tie".format(computer)
-
-    if a_win(user,computer):
-        return "You have chosen {} and the computer has chosen {}. You are the winner!!!".format(user,computer)
+    if player == computer:
+        print("Computer: ", computer)
+        print("Player: ", player)
+        print("Tie!")
+    elif player == "rock":
+        if computer == "paper":
+            print("Computer: ", computer)
+            print("Player: ", player)
+            print("You Lose!")
+        if computer == "scissors":
+            print("Computer: ", computer)
+            print("Player: ", player)
+            print("You Win!")
+    elif player == "scissors":
+        if computer == "rock":
+            print("Computer: ", computer)
+            print("Player: ", player)
+            print("You Lose!")
+        if computer == "paper":
+            print("Computer: ", computer)
+            print("Player: ", player)
+            print("You Win!")
+    elif player == "paper":
+        if computer == "scissors":
+            print("Computer: ", computer)
+            print("Player: ", player)
+            print("You Lose!")
+        if computer == "rock":
+            print("Computer: ", computer)
+            print("Player: ", player)
+            print("You Win!")
     
-    return "You have chosen {} and the comuter has chosen {}. You have lost :((".format(user,computer)
+    play_again = input("Play again? (yes/no): ").lower()
 
-def a_win(player, enemy):
-    if(player =="R" and enemy =="S") or (player == "S" and enemy == "P") or (player == "P" and enemy == "R"):
-        return True
-    return False
-
-def play_best_of(n):
-    player_wins=0
-    computer_wins=0
-    wins_necessary= math.ceil(n/2)
-    print(wins_necessary)
-
-    
+    if play_again != "yes":
+        break
+print("Bye")
 
 
 
